@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle Clone</title>
+    <link rel="stylesheet" href="wordle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Wordle Clone</h1>
+      <div class="tohide">
+        <div class="word-display">
+          <!-- Display the word with hidden letters -->
+          <div class="letter">_</div>
+          <div class="letter">_</div>
+          <div class="letter">_</div>
+          <div class="letter">_</div>
+          <div class="letter">_</div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="feedback-box"></div>
+        <div class="feedback-box"></div>
+        <div class="feedback-box"></div>
+        <div class="feedback-box"></div>
+        <div class="feedback-box"></div>
+      </div>
+      <div class="input-section">
+        <input type="text" maxlength="5" id="guess-input" />
+        <button class="guess-button" onclick="checkGuess()">Guess</button>
+        <button class="play-again-button" onclick="resetGame()">
+          Play Again
+        </button>
+      </div>
+      <div class="attempts">
+        Attempts left: <span id="attempts-left">6</span>
+      </div>
+      <div class="message" id="message"></div>
+      <div class="guess-list" id="guess-list"></div>
+      <!-- Added div for wrong guesses -->
+    </div>
+
+    <script src="wordle.js"></script>
+  </body>
+</html>
